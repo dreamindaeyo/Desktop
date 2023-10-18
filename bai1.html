@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/kiemtra.css">
+    <link rel="stylesheet" href="/bai1.css">
 </head>
 <body>
     <h2> Nhập vào hai số a và b (a nhỏ hơn b) </h2>
@@ -14,10 +14,12 @@
         <input id="number1" type="number"> <br>
         <label class="label" for="">Số b:</label>
         <input id="number2" type="number"> <br>
-        <button onclick="showResult" class="button"> TÍNH TỔNG HAI SỐ</button>
-        <h2 id="result1">Các số nguyên tố trong khoảng từ a đến b là: </h2>
-        <h2 id="result2">Tổng các số nguyên tố là: </h2>
+        <button onclick="sum()" onclick="show()" type="button"> TÍNH TỔNG HAI SỐ</button>
+        <h2>Các số nguyên tố trong khoảng từ a đến b là: <span id="result1"></span> </h2>
+        <h2>Tổng các số nguyên tố là: <span id="result2"></span></h2>
     </form>
-    <script src="/kiemtra.js"></script>
+    <hr>
+
+    <script src="/bai1.js"></script>
 </body>
 </html>
