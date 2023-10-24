@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhập vào hai số a và b</h1>
+    <form id="form" class="form" action="">
+        <label class="label" for="">Số a: </label>
+        <input id="number1" type="number"> <br>
+        <label class="label" for="">Số b:</label>
+        <input id="number2" type="number"> <br>
+        <button id="btn" type="button">Hiển thị số chính phương</button> <br>
+        <span id="result"></span>
+
+<Script>   
+    function check_so_chinh_phuong(i) {
+        return Math.sqrt(i) % 1 === 0;
+    }
+    function tim_so_chinh_phuong() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+
+        let Arr = []; // có tính biên
+        for (let i = a; i <= b; i++) {
+            if (check_so_chinh_phuong(i) == true) {
+                Arr.push(i);
+            }
+        }
+        let result = document.getElementById("result");
+        result.innerHTML =
+            "Các số chính phương từ  " + a + " đến  " + b + " bao gồm: " + Arr.join(", ");
+    }
+    let show = document.getElementById("btn");
+    show.addEventListener('click', function () {
+        console.log(tim_so_chinh_phuong())
+    })
+</Script>
+</body>
+</html>
